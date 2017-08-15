@@ -33,7 +33,7 @@ codigoCidade INTEGER not null,
 ddd NUMERIC(3) not null,
 nomeCidade VARCHAR(60) not null,
 sigla VARCHAR(3) not null,
-codigoUF INTEGER not null,
+codigoUF INTEGER,
 CONSTRAINT CIDADE_PK PRIMARY KEY (codigoCidade),
 CONSTRAINT CIDADE_UF_FK FOREIGN KEY (codigoUF) REFERENCES UF (codigoUF)
 )Engine = InnoDB;
@@ -55,13 +55,13 @@ CONSTRAINT PAIS_PK PRIMARY KEY (sigla)
 
 CREATE TABLE IF NOT EXISTS COPA (
 ano INTEGER not null,
-dataInicio DATETIME not null,
-dataFim DATETIME not null,
-cidadeAbertura INTEGER not null,
-cidadeEncerramento INTEGER not null,
+dataInicio DATE not null,
+dataFim DATE not null,
+codigoCidadeAbertura INTEGER not null,
+codigoCidadeEncerramento INTEGER not null,
 CONSTRAINT COPA_PK PRIMARY KEY (ano),
-CONSTRAINT COPA_CIDADE_ABERTURA_FK FOREIGN KEY (cidadeAbertura) REFERENCES CIDADE (codigoCidade),
-CONSTRAINT COPA_CIDADE_ENCERRAMENTO_FK FOREIGN KEY (cidadeEncerramento) REFERENCES CIDADE (codigoCidade)
+CONSTRAINT COPA_CIDADE_ABERTURA_FK FOREIGN KEY (codigoCidadeAbertura) REFERENCES CIDADE (codigoCidade),
+CONSTRAINT COPA_CIDADE_ENCERRAMENTO_FK FOREIGN KEY (codigoCidadeEncerramento) REFERENCES CIDADE (codigoCidade)
 )Engine = InnoDB;
 
 CREATE TABLE IF NOT EXISTS sedia (
@@ -110,7 +110,7 @@ codigoPessoa INTEGER not null,
 dataNascimento DATETIME not null,
 sexo VARCHAR(10) not null,
 cpf NUMERIC(11) not null,
-codigoFiliacao INTEGER not null,
+codigoFiliacao INTEGER,
 codigoCidade INTEGER not null,
 CONSTRAINT PESSOA_PK PRIMARY KEY (codigoPessoa),
 CONSTRAINT PESSOA_CIDADE_FK FOREIGN KEY(codigoCidade) REFERENCES CIDADE (codigoCidade),
