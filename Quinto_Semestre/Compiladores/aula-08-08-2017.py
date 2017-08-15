@@ -1,8 +1,8 @@
 import ox
 
 lexer = ox.make_lexer([
-    ('NUMBER', r'[0-9]+(\.[0-9]+?'),
-    ('OP_PRI', r'[*/]')
+    ('NUMBER', r'[0-9]+(\.[0-9]+?)'),
+    ('OP_PRI', r'[*/]'),
     ('OP_SEC', r'[-+]')    
 ])
 
