@@ -1,0 +1,55 @@
+Codigo original da primeira prova de TecProg - 05/05/2017
+
+O código Java a seguir implementa o crivo de Eratóstenes, um dos algoritmos mais
+antigos (+ou- 250A.C.). Esse algoritmo processa números inteiros até um limite, por
+exemplo até 10, e determina se cada número é primo da seguinte forma: primeiro, marca
+todos os múltiplos de 2 como “não-primos”; segundo, marca os múltiplos de 3, e assim
+por diante, marcando todos os múltiplos. No final, todos os números não marcados são
+primos. O retorno seria “2, 3, 5, 7”. Obviamente, o limite não pode ser negativo ou 1.
+
+Evolua o código abaixo, usando as técnicas de 1)Programação Defensiva, 2)Código
+Autoexplicativo e Documentação, e 3) Boas Práticas de Projeto. Boa prova!
+
+Primeiro código:
+
+package erastostenes;
+
+public class Erastostenes {
+	public String prime(int max) {
+		boolean[] result = new boolean[max + 2];
+		result[0] = false; result[1] = false;
+		for (int i = 2; i < result.lenght; i++) result[i] = true;
+		for (int value = 2; value <= max; value++) {
+			if (result[value]) {
+			for (int notPrime = 2 * value; notPrime <= max; notPrime += value)	{
+ 				result[notPrime] = false;
+		}}}
+		String resultString = String.valueOf(2);
+		for (int i = 3; i <= max; i++) {
+			if (result[i]) {
+				resultString += ", " + i;
+			}
+		}
+		return resultString;
+	}
+}
+
+Segundo código:
+
+#include <stdio.h>
+#define MAX 101
+
+main(){
+	int p[MAX];
+	int c, i;
+	for(c=0;c<MAX;++c) p[c]=0;
+
+	p[0]=1;
+	p[1]=1;
+	for(c=2; c<MAX/2;++c)
+		if(!p[c]) for(i=c+c;i<MAX;i+=c) p[i]=1;
+
+	for(c=0; c<MAX;++c) if(!p[c]) printf("%d ", c);
+	printf("\n");
+}
+

@@ -24,9 +24,8 @@ INSERT INTO CIDADE (codigoCidade, ddd, nomeCidade, sigla) VALUES
 (3,'001','Paris','FRA');
 
 INSERT INTO CIDADE VALUES
-(4,'021','Rio de Janeiro','BRA', 1),
-(5,'011','São Paulo','BRA', 2);
-
+(4,'021','Rio de Janeiro','BRA', 1),(5,'011','São Paulo','BRA', 2);
+	
 -- Inserindo dados na tabela BAIRRO (codigoBairro, nomeBairro, codigoCidade)
 
 INSERT INTO BAIRRO VALUES (1, 'Leblon', 4),(2, 'Ipanema', 4),(3, 'Copacabana',4 ),
@@ -36,34 +35,19 @@ INSERT INTO BAIRRO VALUES (1, 'Leblon', 4),(2, 'Ipanema', 4),(3, 'Copacabana',4 
 
 INSERT INTO PAIS VALUES
 
-('RSA','Africa do Sul','027'), 
-('ALG','Argelia','213'), 
-('CMR','Camaroes','237'), 
-('CGO','Congo','242'), 
-('EGY','Egito','020'), 
-('MAR','Marrocos','212'), 
-('NIG','Nigeria','234'), 
-('SEN','Senegal','221'), 
-('TUN','Tunisia','216'),
+('RSA','Africa do Sul','027'),('ALG','Argelia','213'),('CMR','Camaroes','237'), 
+('CGO','Congo','242'),('EGY','Egito','020'),('MAR','Marrocos','212'), 
+('NIG','Nigeria','234'),('SEN','Senegal','221'),('TUN','Tunisia','216'),
 
-('ARG', 'Argentina', '054'),
-('BRA','Brasil','055'),
-('BOL','Bolivia','591'),
-('CAN','Canada','001'),
-('CHI','Chile','056'),
-('COL','Colombia','057'),
-('CRC','Costa Rica','506'),
-('CUB','Cuba','053'),
-('ESA','El Salvador','503'),
-('ECU','Equador','593'),
-('USA','Estados Unidos','001'),
-('HAI','Haiti','509'),
-('HON','Honduras','504'),
-('JAM','Jamaica','001'),
-('MEX','Mexico','052'),
-('PAR','Paraguai','595'),
-('PER','Peru','051'),
-('URU','Uruguai','598'),
+('ARG', 'Argentina', '054'),('BRA','Brasil','055'),
+('BOL','Bolivia','591'),('CAN','Canada','001'),
+('CHI','Chile','056'),('COL','Colombia','057'),
+('CRC','Costa Rica','506'),('CUB','Cuba','053'),
+('ESA','El Salvador','503'),('ECU','Equador','593'),
+('USA','Estados Unidos','001'),('HAI','Haiti','509'),
+('HON','Honduras','504'),('JAM','Jamaica','001'),
+('MEX','Mexico','052'),('PAR','Paraguai','595'),
+('PER','Peru','051'),('URU','Uruguai','598'),
 
 ('KSA','Arabia Saudita','966'),('CHN','China','086'),
 ('PRK','Coreia do Norte','850'),('KOR','Coreia do Sul','082'),
@@ -87,10 +71,8 @@ INSERT INTO PAIS VALUES
 
 -- Inserindo dados na tabela COPA (ano, dataInicio, dataFim, codigoCidadeAbertura, codigoCidadeEncerramento)
 
-INSERT INTO COPA VALUES (1930, '1930-07-13', '1930-07-30', 1, 1),
-(1934, '1934-05-27', '1934-06-10', 2, 2),
-(1938, '1938-06-04', '1938-06-19', 3, 3),
-(1950, '1950-06-24', '1950-07-16', 4, 5);
+INSERT INTO COPA VALUES (1930, '1930-07-13', '1930-07-30', 1, 1),(1934, '1934-05-27', '1934-06-10', 2, 2),
+(1938, '1938-06-04', '1938-06-19', 3, 3),(1950, '1950-06-24', '1950-07-16', 4, 5);
 
 -- Inserindo dados na tabela sedia (ano, sigla)
 
@@ -160,3 +142,18 @@ INSERT INTO Jogador VALUES (1, 5),(2, 6),(3, 7),(4, 8),(5, 9),(6, 10),(7, 11),(8
 -- Inserindo dados na tabela Reporter (codigoReporter, senha, login, codigoPessoa)
 
 INSERT INTO Reporter VALUES (1, 'Willi-W', 'Willi-Waack', 1),(2, 'MCD3131', 'CrisD', 2),(3, 'Guigui', 'Guigui-10', 3);
+
+-- Inserindo dados na tabela Delegacao (codigoDelegacao, sigla)
+
+INSERT INTO Delegacao VALUES (1, 'ARG'),(2, 'BEL'),(3, 'BOL'),(4, 'BRA'),(5, 'CHI'),(6, 'USA'),
+(7, 'FRA'),(8, 'YUG'),(9, 'MEX'),(10, 'PAR'),(11, 'PER'),(12, 'ROM'),(13, 'URU');
+
+-- Inserindo dados na tabela integra (codigoDelegacao, codigoPessoa)
+
+INSERT INTO integra VALUES (4, 4),(4, 5),(4, 6),(4, 7),(4, 8),(4, 9),(4, 10),(4, 11),(4, 12),(4, 13),
+(4, 14),(4, 15),(4, 16),(4, 17),(4, 18),(4, 19),(4, 20),(4, 21),(4, 22),(4, 23),(4, 24),(4, 25),(4, 26);
+
+-- Inserindo dados na tabela Participante (codigoJogo, codigoDelegacao, numeroGols, codigoTime, codigoPessoa)
+
+INSERT INTO Participante VALUES (9, 4, 0, 1, 5),(9, 4, 0, 2, 6),(9, 4, 0, 3, 7),(9, 4, 0, 3, 8),(9, 4, 0, 3, 9),
+(9, 4, 0, 3, 10),(9, 4, 0, 3, 11),(9, 4, 0, 3, 12),(9, 4, 0, 3, 13),(9, 4, 2, 3, 24),(9, 4, 2, 3, 21);

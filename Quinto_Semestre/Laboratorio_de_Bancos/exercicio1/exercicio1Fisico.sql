@@ -151,3 +151,29 @@ CONSTRAINT TELEFONE_TIPOTELEFONE_FK FOREIGN KEY(codigoTipo) REFERENCES TIPOTELEF
 CONSTRAINT TELEFONE_PESSOA_FK FOREIGN KEY (codigoPessoa) REFERENCES PESSOA (codigoPessoa),
 CONSTRAINT TELEFONE_CIDADE_FK FOREIGN KEY (codigoCidade) REFERENCES CIDADE (codigoCidade)
 )Engine = InnoDB;
+
+CREATE TABLE Delegacao (
+codigoDelegacao INTEGER,
+sigla VARCHAR(3),
+CONSTRAINT Delegacao_PK PRIMARY KEY (codigoDelegacao),
+CONSTRAINT Delegacao_Pais_FK FOREIGN KEY (sigla) REFERENCES PAIS (sigla)
+)Engine = InnoDB;
+
+CREATE TABLE integra (
+codigoDelegacao INTEGER,
+codigoPessoa INTEGER,
+CONSTRAINT integra_Delegacao_FK FOREIGN KEY (codigoDelegacao) REFERENCES Delegacao (codigoDelegacao),
+CONSTRAINT integra_Pessoa_FK FOREIGN KEY (codigoPessoa) REFERENCES PESSOA (codigoPessoa)
+)Engine = InnoDB;
+
+CREATE TABLE Participante (
+codigoJogo INTEGER,
+codigoDelegacao INTEGER,
+numeroGols INTEGER,
+codigoTime INTEGER,
+codigoPessoa INTEGER,
+CONSTRAINT Participante_PK PRIMARY KEY (codigoTime),
+CONSTRAINT Participante_Jogo_FK FOREIGN KEY (codigoJogo) REFERENCES JOGO (codigoJogo),
+CONSTRAINT Participante_Pessoa_FK FOREIGN KEY(codigoPessoa) REFERENCES PESSOA (codigoPessoa),
+CONSTRAINT Participante_Delegacao_FK FOREIGN KEY (codigoDelegacao) REFERENCES Delegacao (codigoDelegacao)
+)Engine = InnoDB;
