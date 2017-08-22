@@ -84,17 +84,22 @@ INSERT INTO participa VALUES
 (1930, 'ARG'),(1930, 'BEL'),(1930, 'BOL'),(1930, 'BRA'),(1930, 'CHI'),(1930, 'USA'),(1930, 'FRA'),(1930, 'YUG'),(1930, 'MEX'),(1930, 'PAR'),
 (1930, 'PER'),(1930, 'ROM'),(1930, 'URU');
 
+-- Inserindo dados na tabela Estadio (codigoEstadio, nomeEstadio, capacidadeTotal, codigoCidade)
+
+INSERT INTO Estadio VALUES (1, 'Estadio Pocitos', 100000, 1),
+ (2, 'Estadio Parque Central', 200000, 1), (3, 'Estadio Centenario', 250000, 1);
+
 -- Inserindo dados na tabela JOGO (nomeEstadio, dataHora, codigoJogo, ano, codigoCidade)
 
-INSERT INTO JOGO VALUES ('Estadio Pocitos','1930-07-13 15:00:00.000',1, 1930, 1),('Estadio Parque Central','1930-07-15 16:00:00.000',2, 1930, 1),
-('Estadio Parque Central','1930-07-16 14:45:00.000',3, 1930, 1), ('Estadio Centenario','1930-07-19 12:50:00.000',4, 1930, 1),
-('Estadio Centenario','1930-07-19 15:00:00.000',5, 1930, 1),('Estadio Centenario','1930-07-22 14:45:00.000',6, 1930, 1),
-('Estadio Parque Central','1930-07-14 12:45:00.000',7, 1930, 1),('Estadio Parque Central','1930-07-17 12:45:00.000',8, 1930, 1),
-('Estadio Centenario','1930-07-20 13:00:00.000',9, 1930, 1),('Estadio Pocitos','1930-07-14 14:50:00.000',10, 1930, 1),
-('Estadio Centenario','1930-07-18 14:30:00.000',11, 1930, 1),('Estadio Centenario','1930-07-21 14:50:00.000',12, 1930, 1),
-('Estadio Parque Central','1930-07-13 15:00:00.000',13, 1930, 1),('Estadio Parque Central','1930-07-17 14:45:00.000',14, 1930, 1),
-('Estadio Centenario','1930-07-20 15:00:00.000',15, 1930, 1),('Estadio Centenario','1930-07-26 14:45:00.000',16, 1930, 1),
-('Estadio Centenario','1930-07-27 14:45:00.000',17, 1930, 1),('Estadio Centenario','1930-07-30 15:30:00.000',18, 1930, 1);
+INSERT INTO JOGO VALUES (1,'1930-07-13 15:00:00.000',1, 1930),(2,'1930-07-15 16:00:00.000',2, 1930),
+(2,'1930-07-16 14:45:00.000',3, 1930), (3,'1930-07-19 12:50:00.000',4, 1930),
+(3,'1930-07-19 15:00:00.000',5, 1930),(3,'1930-07-22 14:45:00.000',6, 1930),
+(2,'1930-07-14 12:45:00.000',7, 1930),(2,'1930-07-17 12:45:00.000',8, 1930),
+(3,'1930-07-20 13:00:00.000',9, 1930),(1,'1930-07-14 14:50:00.000',10, 1930),
+(3,'1930-07-18 14:30:00.000',11, 1930),(3,'1930-07-21 14:50:00.000',12, 1930),
+(2,'1930-07-13 15:00:00.000',13, 1930),(2,'1930-07-17 14:45:00.000',14, 1930),
+(3,'1930-07-20 15:00:00.000',15, 1930),(3,'1930-07-26 14:45:00.000',16, 1930),
+(3,'1930-07-27 14:45:00.000',17, 1930),(3,'1930-07-30 15:30:00.000',18, 1930);
 
 -- Inserindo dados na tabela joga (numeroGols, sigla, codigoJogo)
 
@@ -109,26 +114,30 @@ INSERT INTO joga VALUES (4, 'FRA', 1),(1, 'MEX', 1),
 
 INSERT INTO FILIACAO VALUES ('Maria','Antonio',1),('Luzia','Jose',2),('Maria','Jose',3);
 
+-- Inserindo dados na tabela Sexo (codigoSexo, descricaoSexo)
+
+INSERT INTO Sexo VALUES (1, 'Masculino'),(2, 'Feminino');
+
 -- Inserindo dados na tabela PESSOA (nome, codigoPessoa, dataNascimento, sexo, cpf, codigoFiliacao, codigoCidade)
 
-INSERT INTO PESSOA (nome, codigoPessoa, dataNascimento, sexo, cpf, codigoCidade) VALUES 
-('Pindaro de Carvalho',4,'1892-06-01','Masculino','64859637232',4),('Joel',5,'1904-05-01','Masculino','86161451255',5),
-('Velloso',6,'1908-09-25','Masculino','58275754968',4),('Brilhante',7,'1904-11-05','Masculino','89465373613',5),
-('Italia',8,'1907-05-22','Masculino','19058527204',4),('Oscarino',9,'1907-01-17','Masculino','71620456850',5),
-('Ze Luiz',10,'1903-05-24','Masculino','75007837288',4),('Benevenuto',11,'1903-08-08','Masculino','81036728234',5),
-('Fausto',12,'1905-01-28','Masculino','54049323680',4),('Fernando',13,'1906-03-01','Masculino','31353754634',5),
-('Fortes',14,'1901-09-09','Masculino','33202771892',4),('Hermógenes',15,'1908-11-01','Masculino','66476457306',5),
-('Ivan Mariz',16,'1910-05-16','Masculino','79122268693',4),('Pamplona',17,'1902-07-14','Masculino','77487688623',5),
-('Carvalho Leite',18,'1912-06-25','Masculino','56263459220',4),('Doca',19,'1903-04-07','Masculino','26591543171',5),
-('Manoelzinho',20,'1907-08-22','Masculino','31732473293',4),('Moderato',21,'1902-07-14','Masculino','53026283339',5),
-('Nilo',22,'1903-04-03','Masculino','75164354810',4),('Poly',23,'1909-01-26','Masculino','17441320038',5),
-('Preguinho',24,'1905-03-02','Masculino','07397963218',4),('Russinho',25,'1902-12-12','Masculino','26560371310',5),
-('Teophilo',26,'1900-04-11','Masculino','81644693275',4);
+INSERT INTO PESSOA (nome, codigoPessoa, dataNascimento, cpf, codigoCidade) VALUES 
+('Pindaro de Carvalho',4,'1892-06-01','64859637232',4,1),('Joel',5,'1904-05-01','86161451255',5,1),
+('Velloso',6,'1908-09-25','58275754968',4,1),('Brilhante',7,'1904-11-05','89465373613',5,1),
+('Italia',8,'1907-05-22','19058527204',4,1),('Oscarino',9,'1907-01-17','71620456850',5,1),
+('Ze Luiz',10,'1903-05-24','75007837288',4,1),('Benevenuto',11,'1903-08-08','81036728234',5,1),
+('Fausto',12,'1905-01-28','54049323680',4,1),('Fernando',13,'1906-03-01','31353754634',5,1),
+('Fortes',14,'1901-09-09','33202771892',4,1),('Hermógenes',15,'1908-11-01','66476457306',5,1),
+('Ivan Mariz',16,'1910-05-16','79122268693',4,1),('Pamplona',17,'1902-07-14','77487688623',5,1),
+('Carvalho Leite',18,'1912-06-25','56263459220',4,1),('Doca',19,'1903-04-07','26591543171',5,1),
+('Manoelzinho',20,'1907-08-22','31732473293',4,1),('Moderato',21,'1902-07-14','53026283339',5,1),
+('Nilo',22,'1903-04-03','75164354810',4,1),('Poly',23,'1909-01-26','17441320038',5,1),
+('Preguinho',24,'1905-03-02','07397963218',4,1),('Russinho',25,'1902-12-12','26560371310',5,1),
+('Teophilo',26,'1900-04-11','81644693275',4,1);
 
 INSERT INTO PESSOA VALUES
-('William Waack', 1, '1952-08-30', 'Masculino', '00000000000', 1, 4),
-('Cristiane Dias', 2, '1980-10-09', 'Feminino', '11111111111', 2, 5),
-('Guilherme Augusto', 3, '1997-05-12', 'Masculino', '22222222222', 3, 4);
+('William Waack', 1, '1952-08-30', '00000000000', 1, 4, 1),
+('Cristiane Dias', 2, '1980-10-09', '11111111111', 2, 5, 2),
+('Guilherme Augusto', 3, '1997-05-12', '22222222222', 3, 4, 1);
 
 -- Inserindo dados na tabela Treinador (codigoTreinador, codigoPessoa)
 
@@ -155,5 +164,5 @@ INSERT INTO integra VALUES (4, 4),(4, 5),(4, 6),(4, 7),(4, 8),(4, 9),(4, 10),(4,
 
 -- Inserindo dados na tabela Participante (codigoJogo, codigoDelegacao, numeroGols, codigoTime, codigoPessoa)
 
-INSERT INTO Participante VALUES (9, 4, 0, 1, 5),(9, 4, 0, 2, 6),(9, 4, 0, 3, 7),(9, 4, 0, 3, 8),(9, 4, 0, 3, 9),
-(9, 4, 0, 3, 10),(9, 4, 0, 3, 11),(9, 4, 0, 3, 12),(9, 4, 0, 3, 13),(9, 4, 2, 3, 24),(9, 4, 2, 3, 21);
+INSERT INTO Participante VALUES (1, 9, 4, 0, 5),(2, 9, 4, 0, 6),(3, 9, 4, 0, 7),(4, 9, 4, 0, 8),(5, 9, 4, 0, 9),
+(6, 9, 4, 0, 10),(7, 9, 4, 0, 11),(8, 9, 4, 0, 12),(9, 9, 4, 0, 13),(10, 9, 4, 2, 24),(11, 9, 4, 2, 21);

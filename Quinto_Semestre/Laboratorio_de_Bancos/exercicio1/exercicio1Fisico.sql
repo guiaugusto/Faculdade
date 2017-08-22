@@ -78,15 +78,23 @@ CONSTRAINT participa_COPA_FK FOREIGN KEY(ano) REFERENCES COPA (ano),
 CONSTRAINT participa_PAIS_FK FOREIGN KEY(sigla) REFERENCES PAIS (sigla)
 )Engine = InnoDB;
 
-CREATE TABLE IF NOT EXISTS JOGO (
+CREATE TABLE IF NOT EXISTS Estadio (
+codigoEstadio INTEGER not null,
 nomeEstadio VARCHAR(50) not null,
+capacidadeTotal BIGINT not null,
+codigoCidade INTEGER not null,
+CONSTRAINT Estadio_PK PRIMARY KEY (codigoEstadio),
+CONSTRAINT Estadio_CIDADE_FK FOREIGN KEY (codigoCidade) REFERENCES CIDADE (codigoCidade)
+)Engine = InnoDB;
+
+CREATE TABLE IF NOT EXISTS JOGO (
+codigoEstadio INTEGER not null,
 dataHora DATETIME not null,
 codigoJogo INTEGER not null,
 ano INTEGER not null,
-codigoCidade INTEGER not null,
 CONSTRAINT JOGO_PK PRIMARY KEY (codigoJogo),
 CONSTRAINT JOGO_COPA_FK FOREIGN KEY(ano) REFERENCES COPA (ano),
-CONSTRAINT JOGO_CIDADE_FK FOREIGN KEY(codigoCidade) REFERENCES CIDADE (codigoCidade)
+CONSTRAINT JOGO_Estadio_FK FOREIGN KEY(codigoEstadio) REFERENCES Estadio (codigoEstadio)
 )Engine = InnoDB;
 
 CREATE TABLE IF NOT EXISTS joga (
@@ -104,17 +112,24 @@ codigoFiliacao INTEGER not null,
 CONSTRAINT FILIACAO_PK PRIMARY KEY (codigoFiliacao)
 )Engine = InnoDB;
 
+CREATE TABLE IF NOT EXISTS Sexo (
+codigoSexo INTEGER not null,
+descricaoSexo VARCHAR(10) not null,
+CONSTRAINT Sexo_PK PRIMARY KEY (codigoSexo)
+)Engine = InnoDB;
+
 CREATE TABLE IF NOT EXISTS PESSOA (
 nome VARCHAR(50) not null,
 codigoPessoa INTEGER not null,
 dataNascimento DATETIME not null,
-sexo VARCHAR(10) not null,
 cpf NUMERIC(11) not null,
 codigoFiliacao INTEGER,
 codigoCidade INTEGER not null,
+codigoSexo INTEGER not null,
 CONSTRAINT PESSOA_PK PRIMARY KEY (codigoPessoa),
 CONSTRAINT PESSOA_CIDADE_FK FOREIGN KEY(codigoCidade) REFERENCES CIDADE (codigoCidade),
-CONSTRAINT PESSOA_FILIACAO_FK FOREIGN KEY(codigoFiliacao) REFERENCES FILIACAO (codigoFiliacao)
+CONSTRAINT PESSOA_FILIACAO_FK FOREIGN KEY(codigoFiliacao) REFERENCES FILIACAO (codigoFiliacao),
+CONSTRAINT PESSOA_Sexo_FK FOREIGN KEY(codigoSexo) REFERENCES Sexo (codigoSexo)
 )Engine = InnoDB;
 
 CREATE TABLE IF NOT EXISTS Treinador (
@@ -152,27 +167,27 @@ CONSTRAINT TELEFONE_PESSOA_FK FOREIGN KEY (codigoPessoa) REFERENCES PESSOA (codi
 CONSTRAINT TELEFONE_CIDADE_FK FOREIGN KEY (codigoCidade) REFERENCES CIDADE (codigoCidade)
 )Engine = InnoDB;
 
-CREATE TABLE Delegacao (
-codigoDelegacao INTEGER,
-sigla VARCHAR(3),
+CREATE TABLE IF NOT EXISTS Delegacao (
+codigoDelegacao INTEGER not null,
+sigla VARCHAR(3) not null,
 CONSTRAINT Delegacao_PK PRIMARY KEY (codigoDelegacao),
 CONSTRAINT Delegacao_Pais_FK FOREIGN KEY (sigla) REFERENCES PAIS (sigla)
 )Engine = InnoDB;
 
-CREATE TABLE integra (
-codigoDelegacao INTEGER,
-codigoPessoa INTEGER,
+CREATE TABLE IF NOT EXISTS integra (
+codigoDelegacao INTEGER not null,
+codigoPessoa INTEGER not null,
 CONSTRAINT integra_Delegacao_FK FOREIGN KEY (codigoDelegacao) REFERENCES Delegacao (codigoDelegacao),
 CONSTRAINT integra_Pessoa_FK FOREIGN KEY (codigoPessoa) REFERENCES PESSOA (codigoPessoa)
 )Engine = InnoDB;
 
-CREATE TABLE Participante (
-codigoJogo INTEGER,
-codigoDelegacao INTEGER,
-numeroGols INTEGER,
-codigoTime INTEGER,
-codigoPessoa INTEGER,
-CONSTRAINT Participante_PK PRIMARY KEY (codigoTime),
+CREATE TABLE IF NOT EXISTS Participante (
+codigoParticipante INTEGER not null,
+codigoJogo INTEGER not null,
+codigoDelegacao INTEGER not null,
+numeroGols INTEGER not null,
+codigoPessoa INTEGER not null,
+CONSTRAINT Participante_PK PRIMARY KEY (codigoParticipante),
 CONSTRAINT Participante_Jogo_FK FOREIGN KEY (codigoJogo) REFERENCES JOGO (codigoJogo),
 CONSTRAINT Participante_Pessoa_FK FOREIGN KEY(codigoPessoa) REFERENCES PESSOA (codigoPessoa),
 CONSTRAINT Participante_Delegacao_FK FOREIGN KEY (codigoDelegacao) REFERENCES Delegacao (codigoDelegacao)
