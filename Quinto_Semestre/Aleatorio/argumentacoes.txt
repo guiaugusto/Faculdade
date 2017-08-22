@@ -1,0 +1,14 @@
+p1 - O site deve ser o foco central.
+* A partir dele, partiriamos para outras funcionalidades.
+p2 - Não, os posts tem que ser o foco central.
+c1 - O foco da aplicação seria os posts, pois a funcionalidade principal seriam eles, os demais são apenas funcionalidades extras.
+c2 - 
+
+p3 - Ter um editor de fotos dentro do tumblr.
+
+- Positivos
+* Poderia ter para facilitar o public alvo a editar suas publicações.
+* Uma variedade a mais para os usuários postarem as fotos.
+
+- Negativos
+* Não, por que a essência do tumblr não é necessariamente focada em edição imagens, e para ser usada, teria de ser tão bom quanto um editor de imagens.

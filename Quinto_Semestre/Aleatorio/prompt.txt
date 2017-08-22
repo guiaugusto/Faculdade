@@ -1,0 +1,9 @@
+function git_branch_name() {
+   git branch 2>/dev/null | grep -e '^*' | sed -E 's/^\* (.+)$/(\1) /'
+}
+
+function show_colored_git_branch_in_prompt() {
+   PS1="\[\033[01;37m\][ \[\033[01;37m\]\u:\[\033[02;34m\]\w\[\033[01;22m\]\$(git_branch_name)\[\033[01;37m\]]:$ "
+}
+
+show_colored_git_branch_in_prompt
