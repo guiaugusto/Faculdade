@@ -13,7 +13,7 @@ lexer = ox.make_lexer([
 
 ])
 
-tokens_list = ['NUMBER', 'OP_S', 'OP_M', 'OP_P']
+tokens_list = ['NUMBER', 'OP_S', 'OP_M', 'OP_P', 'PAR_O', 'PAR_C']
 infix = lambda x, op, y: (op, x, y)
 atom = lambda x: ('atom', float(x))
 
