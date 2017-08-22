@@ -22,13 +22,18 @@ Programação defensiva:
 
 package erastostenes;
 
+import java.lang.String;
+
 public class Erastostenes {
 	
 	/* This method serves to applie Sieve's Erastotenes algorithm, that find a 
 	prime number in a short interval determined by the user using 'max' variable */
 
 	public String prime(int max) {
-		
+
+		/* Verifing if max value is valid. */
+		assert(max > 0);
+
 		/* Declares a boolean array variable with the size save in 'max' variable, counting plus 2 numbers. */
 		boolean[] result = new boolean[max + 2];
 		

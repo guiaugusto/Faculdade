@@ -52,4 +52,3 @@ main(){
 	for(c=0; c<MAX;++c) if(!p[c]) printf("%d ", c);
 	printf("\n");
 }
-
