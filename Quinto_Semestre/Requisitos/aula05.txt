@@ -1,0 +1,34 @@
+Anotações aula 5 - 28/08/2017
+
+Elicitar requisitos é tornar explícito, definido, através da obtenção de um máximo de informação sobre o objeto em questão.
+
+Interessados:
+
+- Podem não ter ideia clara sobre, tem dificuldades para descrever, pontos de vista diferentes entre a equipe de desenvolvimento e entre os clientes, nega a participar da elicitação ou podem fornecer informações errôneas.
+
+- VIEW POINT RESOLUTION - relacionado a conflito de interesses.
+
+Identificação das fontes de informação:
+
+- Priorizar fontes de informação.
+- Principais Heurísticas.
+- Atores mais relevantes.
+	- Documentos mais mencionados;
+	- Rede de comunicação entre os componentes do macro-sistema;
+
+Comunicação:
+
+	- Entre os interessados e entre a equipe de desenvolvimento.
+	- Diretrizes.
+
+Técnicas:
+
+- Storytelling - Storyboard.
+- Prototipação.
+- Entrevista.
+	- Comunicação é um ponto forte.
+	- Despende tempo.
+- Questionário.
+
+
+- Analise de protocolo

@@ -1,0 +1,38 @@
+Slide 1:
+
+Bom dia pessoal, eu sou o Guilherme Augusto, e o assunto que foi responsável por mim é da parte de criação de sites com a ferramenta Joomla!
+
+Slide 2:
+
+Esta é a agenda que será seguida durante este seminário, a fim de ter uma organização durante a explicação da ferramenta.
+
+Primeiro, iremos fazer uma breve introdução explicando especificamente sobre a ideia e o surgimento, logo, em seguida, as características principais envolvidas pela ferramenta, depois os requisitos técnicos, que seriam as ferramentas adicionais necessárias, logo depois, alguns exemplos de sites feitos por esse CMS e as referências utilizadas para a construção desta apresentação.
+
+Slide 3:
+
+Joomla, tendo seu lançamento no dia 16 de setembro de 2005, é um dos principais sistemas de gestão de conteúdo atualmente. Com a divisão entre o design, a programação e o conteúdo ao aplicar no site, permite uma grande flexibilidade na produção de sites com o design extremamente personalizado.
+
+Além disso, como é um projeto open source desenvolvido pelo OpenSourceMatters team, o suporte em relação a quantidade de modelos e temas disponíveis é grande, tendo diversos templates disponíveis que podem ajudar a construir um site otimizado, responsivo e interativo.
+
+Slide 4:
+
+Apesar de várias características importantes, temos que:
+
+- O sistema é de código aberto, tem como licença GPL de software.
+- Em sua instalação, pode ser feita a configuração em diversas línguas, incluindo também em português.
+- Como dito anteriormente, além de ter diversos templates prontos, existem vários módulos e componentes que podem deixar seu site mais interativo, sendo também de fácil instalação.
+- Possui o editor WYSIWYG, que seria uma sigla de "What You See Is What You Get" que significa "o que você vê é o que você obtêm", que basicamente é uma ferramenta que permite visualizar em tempo real como a alteração será feita e qual será o resultado dentro do site.
+- Além disso, tem um sistema de gerenciamento de banners e um sistema de publicação para o conteúdo, a fim de obter algum retorno e aumentar a popularidade de seu site.
+
+(Sistema gerenciador de banners é basicamente uma ferramenta para gerenciar propagandas em seu site)
+(Sistema de publicação de conteúdo é uma aplicação típica de um blog com posts e comentários)
+
+Slide 5:
+
+Com isso, temos os requisitos técnicos. Basicamente, o Joomla é feito na linguagem PHP onde você tem a opção de escolha de 3 bancos de dados para serem utilizados, o mysql, postgreSQL e o SQL server, com isso, também, é necessário servidores web para poderem ser aplicados em seus sites, como o apache, o nginx o microsoft iis. Existem vários outros servidores, sendo locais, que podem auxiliar também na construção de seu site, como o Xampp.
+
+Slide 6: 
+
+Aqui tem alguns exemplos de sites que foram feitos utilizando o Joomla, primeiro aqui temos o site da nintendo da suécia, e outros como esse relacionado a uma fundação do cancêr e um site do Michael Phelps, onde mostra alguns equipamentos de natação.
+
+Mas, basicamente, podem ser desenvolvidos sites de lojas virtuais, blogs, jornais, entre outros.

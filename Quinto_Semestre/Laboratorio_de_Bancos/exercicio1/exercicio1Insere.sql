@@ -2,15 +2,15 @@ USE exercicio1;
 
 -- Inserindo dados na tabela TIPOTELEFONE (codigoTipo, descricaoTipo)
 
-INSERT INTO TIPOTELEFONE VALUES (1, 'Movel'),(2, 'Fixo');
+INSERT INTO TipoTelefone VALUES (1, 'Movel'),(2, 'Fixo');
 
 -- Inserindo dados na tabela TIPOENDERECO (codigoTipoEndereco, descricaoTipoEndereco)
 
-INSERT INTO TIPOENDERECO VALUES (1, 'Residencial'),(2, 'Comercial'),(3, 'Fiscal');
+INSERT INTO TipoEndereco VALUES (1, 'Residencial'),(2, 'Comercial'),(3, 'Fiscal');
 
 -- Inserindo dados na tabela ENDERECO (codigoEndereco, codigoBairro, codigoTipoEndereco)
 
-INSERT INTO ENDERECO VALUES (1,1,1),(2,2,1),(3,5,1),(4,6,3);
+INSERT INTO Endereco VALUES (1,1,1),(2,2,1),(3,5,1),(4,6,3);
 
 -- Inserindo dados na tabela UF (codigoUF, nomeUF)
 
@@ -18,22 +18,22 @@ INSERT INTO UF VALUES (1, 'Rio de Janeiro'),(2, 'São Paulo'),(3, 'Santa Catarin
 
 -- Inserindo dados na tabela CIDADE (codigoCidade, ddd, nomeCidade, sigla, codigoUF)
 
-INSERT INTO CIDADE (codigoCidade, ddd, nomeCidade, sigla) VALUES 
+INSERT INTO Cidade (codigoCidade, ddd, nomeCidade, sigla) VALUES 
 (1,'002','Montevideu','URU'),
 (2,'079','Roma','ITA'),
 (3,'001','Paris','FRA');
 
-INSERT INTO CIDADE VALUES
+INSERT INTO Cidade VALUES
 (4,'021','Rio de Janeiro','BRA', 1),(5,'011','São Paulo','BRA', 2);
 	
 -- Inserindo dados na tabela BAIRRO (codigoBairro, nomeBairro, codigoCidade)
 
-INSERT INTO BAIRRO VALUES (1, 'Leblon', 4),(2, 'Ipanema', 4),(3, 'Copacabana',4 ),
+INSERT INTO Bairro VALUES (1, 'Leblon', 4),(2, 'Ipanema', 4),(3, 'Copacabana',4 ),
 (4, 'Liberdade', 5),(5, 'Iguatemi', 5),(6, 'Ipiranga', 5),(7, 'Parque Batlle', 1),(8, 'Pocitos', 1);
 
 -- Inserindo dados na tabela PAIS (sigla, nomePais, ddi)
 
-INSERT INTO PAIS VALUES
+INSERT INTO Pais VALUES
 
 ('RSA','Africa do Sul','027'),('ALG','Argelia','213'),('CMR','Camaroes','237'), 
 ('CGO','Congo','242'),('EGY','Egito','020'),('MAR','Marrocos','212'), 
@@ -71,7 +71,7 @@ INSERT INTO PAIS VALUES
 
 -- Inserindo dados na tabela COPA (ano, dataInicio, dataFim, codigoCidadeAbertura, codigoCidadeEncerramento)
 
-INSERT INTO COPA VALUES (1930, '1930-07-13', '1930-07-30', 1, 1),(1934, '1934-05-27', '1934-06-10', 2, 2),
+INSERT INTO Copa VALUES (1930, '1930-07-13', '1930-07-30', 1, 1),(1934, '1934-05-27', '1934-06-10', 2, 2),
 (1938, '1938-06-04', '1938-06-19', 3, 3),(1950, '1950-06-24', '1950-07-16', 4, 5);
 
 -- Inserindo dados na tabela sedia (ano, sigla)
@@ -89,9 +89,9 @@ INSERT INTO participa VALUES
 INSERT INTO Estadio VALUES (1, 'Estadio Pocitos', 100000, 1),
  (2, 'Estadio Parque Central', 200000, 1), (3, 'Estadio Centenario', 250000, 1);
 
--- Inserindo dados na tabela JOGO (nomeEstadio, dataHora, codigoJogo, ano, codigoCidade)
+-- Inserindo dados na tabela JOGO (codigoCidade, dataHora, codigoJogo, ano)
 
-INSERT INTO JOGO VALUES (1,'1930-07-13 15:00:00.000',1, 1930),(2,'1930-07-15 16:00:00.000',2, 1930),
+INSERT INTO Jogo VALUES (1,'1930-07-13 15:00:00.000',1, 1930),(2,'1930-07-15 16:00:00.000',2, 1930),
 (2,'1930-07-16 14:45:00.000',3, 1930), (3,'1930-07-19 12:50:00.000',4, 1930),
 (3,'1930-07-19 15:00:00.000',5, 1930),(3,'1930-07-22 14:45:00.000',6, 1930),
 (2,'1930-07-14 12:45:00.000',7, 1930),(2,'1930-07-17 12:45:00.000',8, 1930),
@@ -112,7 +112,7 @@ INSERT INTO joga VALUES (4, 'FRA', 1),(1, 'MEX', 1),
 
 -- Inserindo dados na tabela FILIACAO (nomeMae, nomePai, codigoFiliacao)
 
-INSERT INTO FILIACAO VALUES ('Maria','Antonio',1),('Luzia','Jose',2),('Maria','Jose',3);
+INSERT INTO Filiacao VALUES ('Maria','Antonio',1),('Luzia','Jose',2),('Maria','Jose',3);
 
 -- Inserindo dados na tabela Sexo (codigoSexo, descricaoSexo)
 
@@ -120,7 +120,7 @@ INSERT INTO Sexo VALUES (1, 'Masculino'),(2, 'Feminino');
 
 -- Inserindo dados na tabela PESSOA (nome, codigoPessoa, dataNascimento, sexo, cpf, codigoFiliacao, codigoCidade)
 
-INSERT INTO PESSOA (nome, codigoPessoa, dataNascimento, cpf, codigoCidade) VALUES 
+INSERT INTO Pessoa (nome, codigoPessoa, dataNascimento, cpf, codigoCidade, codigoSexo) VALUES 
 ('Pindaro de Carvalho',4,'1892-06-01','64859637232',4,1),('Joel',5,'1904-05-01','86161451255',5,1),
 ('Velloso',6,'1908-09-25','58275754968',4,1),('Brilhante',7,'1904-11-05','89465373613',5,1),
 ('Italia',8,'1907-05-22','19058527204',4,1),('Oscarino',9,'1907-01-17','71620456850',5,1),
@@ -134,7 +134,7 @@ INSERT INTO PESSOA (nome, codigoPessoa, dataNascimento, cpf, codigoCidade) VALUE
 ('Preguinho',24,'1905-03-02','07397963218',4,1),('Russinho',25,'1902-12-12','26560371310',5,1),
 ('Teophilo',26,'1900-04-11','81644693275',4,1);
 
-INSERT INTO PESSOA VALUES
+INSERT INTO Pessoa VALUES
 ('William Waack', 1, '1952-08-30', '00000000000', 1, 4, 1),
 ('Cristiane Dias', 2, '1980-10-09', '11111111111', 2, 5, 2),
 ('Guilherme Augusto', 3, '1997-05-12', '22222222222', 3, 4, 1);
@@ -162,7 +162,7 @@ INSERT INTO Delegacao VALUES (1, 'ARG'),(2, 'BEL'),(3, 'BOL'),(4, 'BRA'),(5, 'CH
 INSERT INTO integra VALUES (4, 4),(4, 5),(4, 6),(4, 7),(4, 8),(4, 9),(4, 10),(4, 11),(4, 12),(4, 13),
 (4, 14),(4, 15),(4, 16),(4, 17),(4, 18),(4, 19),(4, 20),(4, 21),(4, 22),(4, 23),(4, 24),(4, 25),(4, 26);
 
--- Inserindo dados na tabela Participante (codigoJogo, codigoDelegacao, numeroGols, codigoTime, codigoPessoa)
+-- Inserindo dados na tabela Participante (codigoParticipante, codigoJogo, codigoDelegacao, numeroGols, codigoPessoa)
 
 INSERT INTO Participante VALUES (1, 9, 4, 0, 5),(2, 9, 4, 0, 6),(3, 9, 4, 0, 7),(4, 9, 4, 0, 8),(5, 9, 4, 0, 9),
 (6, 9, 4, 0, 10),(7, 9, 4, 0, 11),(8, 9, 4, 0, 12),(9, 9, 4, 0, 13),(10, 9, 4, 2, 24),(11, 9, 4, 2, 21);
