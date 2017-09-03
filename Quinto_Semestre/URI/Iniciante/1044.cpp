@@ -8,33 +8,18 @@ int main (){
 
 	cin >> a >> b;
 
-	int teste = 0;
-
 	if(a > b){
-
-		while(b <= a){
-			b += b;
+		if(a % b == 0){
+			cout << "Sao Multiplos" << endl;
+		}else{
+			cout << "Nao sao Multiplos" << endl;
 		}
-
-		if(a == b)
-			teste = 1;
-
 	}else{
-
-		while(a <= b){
-			a += a;
+		if(b % a == 0){
+			cout << "Sao Multiplos" << endl;
+		}else{
+			cout << "Nao sao Multiplos" << endl;	
 		}
-
-		if(b == a)
-			teste = 1;
-
-	}
-
-
-	if(teste == 1){
-		printf("Sao Multiplos\n");
-	}else{
-		printf("Nao sao Multiplos\n");
 	}
 
 	return 0;
