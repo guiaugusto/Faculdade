@@ -1,18 +1,18 @@
 # Paradigmas de solução de problemas
 
-[1. Busca Completa - Força Bruta](#1-busca-completa---força-bruta)
-> [1.1 BC Iterativa - UVA 725](#11-bc-iterativa---uva-725)
-> [1.2 BC Vários loops - UVA 441](#12-bc-vários-loops---uva-441)
-> [1.3 BC com poda - UVA 11565](#13-bc-com-poda---uva-11565)
-> [1.4 BC subconjuntos - UVA 12455](#14-bc-subconjuntos---uva-12455)
-> [1.5 BC Recursivo - UVA 750](#15-bc-recursivo---uva-750)
-[2. Dividir e Conquistar](#2-dividir-e-conquistar)
-> [2.1 Busca binária](#21-busca-binária)
-> [2.2 Método da Bisseção](#22-método-da-bisseção)
-[3. Algoritmos Gulosos](#3-algoritmos-gulosos)
-> [3.1 Coin change - versão gulosa](#31-coin-change---versão-gulosa)
-> [3.2 Balança de carga - UVA 410](#32-balança-de-carga---uva-410)
-[4. Programação dinâmica](#4-programação-dinâmica)
+[1. Busca Completa - Força Bruta](#1-busca-completa---força-bruta)  
+> [1.1 BC Iterativa - UVA 725](#11-bc-iterativa---uva-725)  
+> [1.2 BC Vários loops - UVA 441](#12-bc-vários-loops---uva-441)  
+> [1.3 BC com poda - UVA 11565](#13-bc-com-poda---uva-11565)  
+> [1.4 BC subconjuntos - UVA 12455](#14-bc-subconjuntos---uva-12455)  
+> [1.5 BC Recursivo - UVA 750](#15-bc-recursivo---uva-750)  
+[2. Dividir e Conquistar](#2-dividir-e-conquistar)  
+> [2.1 Busca binária](#21-busca-binária)  
+> [2.2 Método da Bisseção](#22-método-da-bisseção)  
+[3. Algoritmos Gulosos](#3-algoritmos-gulosos)  
+> [3.1 Coin change - versão gulosa](#31-coin-change---versão-gulosa)  
+> [3.2 Balança de carga - UVA 410](#32-balança-de-carga---uva-410)  
+[4. Programação dinâmica](#4-programação-dinâmica)  
 
 ## 1. Busca Completa
 
