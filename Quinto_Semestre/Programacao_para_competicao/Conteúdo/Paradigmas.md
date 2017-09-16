@@ -7,9 +7,11 @@
 > [1.4 BC subconjuntos - UVA 12455](#14-bc-subconjuntos---uva-12455)
 > [1.5 BC Recursivo - UVA 750](#15-bc-recursivo---uva-750)
 [2. Dividir e Conquistar](#2-dividir-e-conquistar)
-> []()
-> []()
+> [2.1 Busca binária](#21-busca-binária)
+> [2.2 Método da Bisseção](#22-método-da-bisseção)
 [3. Algoritmos Gulosos](#3-algoritmos-gulosos)
+> [3.1 Coin change - versão gulosa](#31-coin-change---versão-gulosa)
+> [3.2 Balança de carga - UVA 410](#32-balança-de-carga---uva-410)
 [4. Programação dinâmica](#4-programação-dinâmica)
 
 ## 1. Busca Completa
@@ -154,10 +156,10 @@ Dada uma função f(x) definida em um intervalo [A, B], encontre Xo pertencente 
 Técnica: faça a melhor escolha local a cada passo, até que (com sorte) seja encontrada a solução.
 Em vários casos, algoritmos gulosos não funcionam (problemas de programação dinâmica), mas quando funcionam, o código será pequeno e eficiente.
 
-### 3.1 Coin change (versão gulosa)
+### 3.1 Coin change - versão gulosa
 
 Dado um montante M e uma lista de moedas disponíveis, determine a menor quantidade de moedas para representar M.
 
-### 3.2 Balanço de carga (UVA 410)
+### 3.2 Balanço de carga - UVA 410
 
 Dada uma balança com dois pratos e uma lista de pesos, encontre o menor desequilíbrio possível, ao colocarmos todos os pesos nas balanças.
