@@ -23,6 +23,7 @@ Comunicação:
 
 Técnicas:
 
+- Brainstorming
 - Storytelling - Storyboard.
 - Prototipação.
 - Entrevista.

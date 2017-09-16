@@ -1,5 +1,11 @@
-0
-1
-2
-10000000000000000000
--1
+10
+pedra tesoura
+pedra lagarto
+papel pedra
+papel Spock
+tesoura papel
+tesoura lagarto
+lagarto papel
+lagarto Spock
+Spock pedra
+Spock tesoura

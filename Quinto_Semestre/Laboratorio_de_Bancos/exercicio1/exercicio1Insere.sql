@@ -21,7 +21,8 @@ INSERT INTO UF VALUES (1, 'Rio de Janeiro'),(2, 'São Paulo'),(3, 'Santa Catarin
 INSERT INTO Cidade (codigoCidade, ddd, nomeCidade, sigla) VALUES 
 (1,'002','Montevideu','URU'),
 (2,'079','Roma','ITA'),
-(3,'001','Paris','FRA');
+(3,'001','Paris','FRA'),
+(7, '020','Kolasin','YUG');
 
 INSERT INTO Cidade VALUES
 (4,'021','Rio de Janeiro','BRA', 1),(5,'011','São Paulo','BRA', 2);
@@ -134,6 +135,14 @@ INSERT INTO Pessoa (nome, codigoPessoa, dataNascimento, cpf, codigoCidade, codig
 ('Preguinho',24,'1905-03-02','07397963218',4,1),('Russinho',25,'1902-12-12','26560371310',5,1),
 ('Teophilo',26,'1900-04-11','81644693275',4,1);
 
+INSERT INTO Pessoa (nome, codigoPessoa, dataNascimento, cpf, codigoCidade, codigoSexo) VALUES
+('Milovan Jaksic', 27, '1909-09-21', '51155703278', 7, 1),('Milorad Arsenijevic', 28, '1906-03-18', '53682982345', 7, 1),
+('Dragan Mihajlovic', 29, '1906-12-13', '55680318270', 7, 1),('Ivica Bek', 30, '1909-10-29', '75877614894', 7, 1),
+('Milutin Ivkovic', 31, '1906-03-01', '40091891264', 7, 1),('Ljubisa Stefanovic', 32, '1910-01-04', '66324567745', 7, 1),
+('Aleksandar Tirnanic', 33, '1911-07-15', '03409484507', 7, 1),('Djordje Vujadinovic', 34, '1909-11-29', '62761381424', 7, 1),
+('Branislav Sekulic', 35, '1906-10-29', '88183894240', 7, 1),('Blagoje Marjanovic', 36, '1907-09-09', '54689315167', 7, 1),
+('Momcilo Djokic', 37, '1911-02-23', '09130437962', 7, 1),('Bosko Simonovic', 38, '1898-02-12', '37854551006', 7, 1);
+
 INSERT INTO Pessoa VALUES
 ('William Waack', 1, '1952-08-30', '00000000000', 1, 4, 1),
 ('Cristiane Dias', 2, '1980-10-09', '11111111111', 2, 5, 2),
@@ -165,4 +174,4 @@ INSERT INTO integra VALUES (4, 4),(4, 5),(4, 6),(4, 7),(4, 8),(4, 9),(4, 10),(4,
 -- Inserindo dados na tabela Participante (codigoParticipante, codigoJogo, codigoDelegacao, numeroGols, codigoPessoa)
 
 INSERT INTO Participante VALUES (1, 9, 4, 0, 5),(2, 9, 4, 0, 6),(3, 9, 4, 0, 7),(4, 9, 4, 0, 8),(5, 9, 4, 0, 9),
-(6, 9, 4, 0, 10),(7, 9, 4, 0, 11),(8, 9, 4, 0, 12),(9, 9, 4, 0, 13),(10, 9, 4, 2, 24),(11, 9, 4, 2, 21);
+(6, 9, 4, 0, 10),(7, 9, 4, 0, 11),(8, 9, 4, 0, 12),(9, 9, 4, 0, 13),(10, 9, 4, 2, 24),(11, 9, 4, 2, 21), (12, ), (13, ), (14, );

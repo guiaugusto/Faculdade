@@ -9,7 +9,6 @@ Delegacao.sigla AS Mandante, joga.sigla AS Desafiante
 FROM Pessoa, Delegacao, Participante, joga 
 WHERE Pessoa.codigoPessoa = Participante.codigoPessoa 
 and Participante.numeroGols > 0 
-and Participante.codigoDelegacao = 4 
 and joga.codigoJogo = 9
 and Delegacao.sigla != joga.sigla
 and Delegacao.sigla = 'BRA'; 
@@ -22,7 +21,7 @@ WHERE participa.ano = 1930 and participa.sigla = Pais.sigla;
 
 /* Alterar tupla da tabela Pessoa. */
 
-UPDATE Participante SET numeroGols = 3
+UPDATE Participante SET numeroGols = 1
 WHERE Participante.codigoPessoa = 5;
 
 /* Apagando um registro. */

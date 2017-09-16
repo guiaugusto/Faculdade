@@ -4,31 +4,33 @@ using namespace std;
 
 int main (){
 
-	double v;
-	double i = 0;
-	double resto = 0;
+	double oitoporcento = 0;
+	double desoitoporcento = 0;
+	double vinteoitoporcento = 0;
 
-	cin >> v;
+	double n;
 
-	if(v > 2000){
-		resto = v - 2000;
-		i = i + resto*0.08;
+	cin >> n;
+
+	oitoporcento = n - 2000;
+
+	if(oitoporcento > 1000){
+		desoitoporcento = oitoporcento - 1000;
+		oitoporcento = oitoporcento - desoitoporcento;
+
+		if(desoitoporcento > 1500){
+			vinteoitoporcento = desoitoporcento - 1500;
+			desoitoporcento = desoitoporcento - vinteoitoporcento;
+		}
+
 	}
 
-	if(v > 3000){
-		resto = v - 3000;
-		i = i + resto*0.18;
-	}
-
-	if(v > 4500){
-		resto = v - 4500;
-		i = i + resto*0.28;
-	}
-
-	if(i == 0)
+	if(n <= 2000){
 		printf("Isento\n");
-	else
-		printf("R$ %.2lf\n", i);
+	}else{
+		printf("R$ %.2lf\n", oitoporcento*0.08+desoitoporcento*0.18+vinteoitoporcento*0.28);
+	}
+
 
 	return 0;
 }
