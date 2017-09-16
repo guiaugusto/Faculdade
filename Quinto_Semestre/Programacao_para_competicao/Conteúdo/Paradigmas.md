@@ -6,12 +6,15 @@
 > [1.3 BC com poda - UVA 11565](#13-bc-com-poda---uva-11565)  
 > [1.4 BC subconjuntos - UVA 12455](#14-bc-subconjuntos---uva-12455)  
 > [1.5 BC Recursivo - UVA 750](#15-bc-recursivo---uva-750)  
+
 [2. Dividir e Conquistar](#2-dividir-e-conquistar)  
 > [2.1 Busca binária](#21-busca-binária)  
 > [2.2 Método da Bisseção](#22-método-da-bisseção)  
+
 [3. Algoritmos Gulosos](#3-algoritmos-gulosos)  
 > [3.1 Coin change - versão gulosa](#31-coin-change---versão-gulosa)  
 > [3.2 Balança de carga - UVA 410](#32-balança-de-carga---uva-410)  
+
 [4. Programação dinâmica](#4-programação-dinâmica)  
 
 ## 1. Busca Completa
@@ -151,7 +154,7 @@ Dado um vetor ordenado, determine se um inteiro X  está presente no vetor.
 
 Dada uma função f(x) definida em um intervalo [A, B], encontre Xo pertencente [A, B], tal que f(Xo) = 0.
 
-## 3. Algitmos Gulosos
+## 3. Algoritmos Gulosos
 
 Técnica: faça a melhor escolha local a cada passo, até que (com sorte) seja encontrada a solução.
 Em vários casos, algoritmos gulosos não funcionam (problemas de programação dinâmica), mas quando funcionam, o código será pequeno e eficiente.
